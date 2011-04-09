@@ -1,5 +1,10 @@
-# jQuery Message Slider Plugin
-This plugin provides a cool way to temporarily display messages to the user.
+# Credit
+Firstly, this plugin is built upon the work of  Henrik Joreteg, which can be found here: http://projects.joreteg.com/jquery-sliding-message/
+
+# What is it?
+A jQuery plugin which provides a cool way to temporarily display messages to the user. Messages slide in vertically, and slide out again after a few seconds.
+
+I made these changes so that it can be used as a display mechanism for django.contrib.messages, but it does not depend on Django in any way.
 
 # Requires
 jQuery
