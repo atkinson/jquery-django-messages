@@ -18,7 +18,7 @@ BSD
         $.showMessage(message);
     });
     </script>
- 
+    
 # 2. Very basic usage, multiple messages
 
     <script type="text/javascript"> 
@@ -29,7 +29,19 @@ BSD
     });
     </script>
 
-# 3. showMessage supports callbacks (but showMessages does not)
+# 3. Django - display contrib.messages
+
+    <script type="text/javascript"> 
+    $(function()
+    {
+        {% if messages %}
+            var messages = ['{{ messages|safeseq|join:"','" }}'];
+            $.showMessages(messages);
+        {% endif %}
+    });
+    </script>
+    
+# 4. showMessage supports callbacks (but showMessages does not)
 
     <script type="text/javascript"> 
     $(function()
@@ -41,7 +53,7 @@ BSD
     });
     </script>
 
-# 4. These are all the options, showing their defaults.
+# 5. These are all the options, showing their defaults.
 
     <script type="text/javascript"> 
     $(function()
@@ -59,3 +71,5 @@ BSD
         }, callback);
     });
     </script>
+    
+
